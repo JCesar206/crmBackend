@@ -3,7 +3,6 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import pymysql
 
-# Cambia 'root' y 'tu_password' por tus credenciales locales de MySQL
 DB_USER = "root"
 DB_PASSWORD = ""
 DB_HOST = "localhost"

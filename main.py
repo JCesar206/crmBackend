@@ -33,7 +33,7 @@ def read_root():
     print("📥 [LOG] Petición recibida en la ruta raíz GET /")
     return {"message": "¡Servidor de Python corriendo al 100%! 🚀"}
 
-# --- ENDPOINTS CLIENTES ---
+# Endpoints clientes
 @app.get("/clientes")
 def get_clientes(db: Session = Depends(get_db)):
     print("📥 [LOG] Consultando lista de clientes...")
@@ -50,7 +50,7 @@ def create_cliente(cliente: ClienteCreate, db: Session = Depends(get_db)):
     print(f"✅ [LOG] Cliente creado con ID: {nuevo.id}")
     return nuevo
 
-# --- ENDPOINTS COTIZACIONES ---
+# Endpoints cotizaciones
 @app.get("/cotizaciones")
 def get_cotizaciones(db: Session = Depends(get_db)):
     print("📥 [LOG] Consultando lista de cotizaciones...")
